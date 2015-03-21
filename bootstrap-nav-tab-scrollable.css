@@ -1,6 +1,7 @@
 .horizontal-scrollable-tabs {
-  height: 50px;
+  min-height: 50px;
 }
+
 .horizontal-scrollable-tabs .arrow-right {
   float: right;
 }
@@ -11,7 +12,7 @@
 .horizontal-scrollable-tabs .scroller {
   font-size: 18px;
   color: red;
-  padding: 10px 0px;
+  padding: 10px 10px; 
   display: none;
 }
 .horizontal-scrollable-tabs .scroller.disabled {

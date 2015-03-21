@@ -2,7 +2,6 @@
 (function ($){
 
   $.fn.horizontalTabs = function() {
-    console.log(this);
     // Variable creation
     var $elem = $(this),
     widthOfReducedList = $elem.find('.nav-tabs-horizontal').width(),
@@ -13,7 +12,6 @@
       widthAvailale = $elem.width();
 
       if (widthOfList > widthAvailale) {
-        
         $elem.find('.scroller').show();
         updateArrowStyle(currentPos);
         widthOfReducedList = $elem.find('.nav-tabs-horizontal').width();
