@@ -8,7 +8,10 @@
     widthOfList = 0,
     currentPos = 0,
     adjustScroll = function () {
-      widthOfList = $elem.find('.nav-tabs-horizontal li').width() * $elem.find('.nav-tabs-horizontal li').length;
+      $elem.find('.nav-tabs-horizontal li').each(function(index, item) {
+        widthOfList += $(item).width();
+      });
+
       widthAvailale = $elem.width();
 
       if (widthOfList > widthAvailale) {
