@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-nav-tab-scrollable by LucasLazaro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Bootstrap-nav-tab-scrollable</h1>
+      <h2 class="project-tagline">Simple horizontally scrollable nav tab for Bootstrap 3.0 (good for mobile sites)</h2>
+      <a href="https://github.com/LucasLazaro/bootstrap-nav-tab-scrollable" class="btn">View on GitHub</a>
+      <a href="https://github.com/LucasLazaro/bootstrap-nav-tab-scrollable/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/LucasLazaro/bootstrap-nav-tab-scrollable/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="bootstrap-nav-tab-scrollable" class="anchor" href="#bootstrap-nav-tab-scrollable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>bootstrap-nav-tab-scrollable</h1>
+
+<h2>
+<a id="synopsis" class="anchor" href="#synopsis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synopsis</h2>
+
+<p>Simple horizontally scrollable nav tab for Bootstrap 3.0 (good for mobile sites), i.e. for product images on m-commerce. Works with touch events. </p>
+
+<h2>
+<a id="code-example" class="anchor" href="#code-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Example</h2>
+
+<p>Just use the normal Bootstrap Nav-tab construction, adding the <code>horizontal-scrollable-tabs</code> and the <code>nav-tabs-horizontal</code> classes for the desired style effect.  </p>
+
+<p>It's also possible to add arrows for extra control, but touch events will work to scroll horizontally the tab.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-xs-12<span class="pl-pds">"</span></span>&gt;
+          &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>js_image_selection<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>horizontal-scrollable-tabs<span class="pl-pds">"</span></span>&gt;
+            <span class="pl-c">&lt;!-- Added for controls (will be invisible on bigger viewports) - touch/swipe/dragging does work though --&gt;</span>
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>scroller arrow-left<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-arrow-left<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">div</span>&gt; 
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>scroller arrow-right<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-arrow-right<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>horizontal-tabs<span class="pl-pds">"</span></span>&gt;
+              <span class="pl-c">&lt;!-- nav-tabs-horizontal added for the style --&gt;</span>
+              &lt;<span class="pl-ent">ul</span> <span class="pl-e">role</span>=<span class="pl-s"><span class="pl-pds">"</span>tablist<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>nav nav-tabs nav-tabs-horizontal<span class="pl-pds">"</span></span>&gt;
+                <span class="pl-c">&lt;!-- Normal bootstrap tabs --&gt;</span>
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">role</span>=<span class="pl-s"><span class="pl-pds">"</span>presentation<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>active<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#image01<span class="pl-pds">"</span></span> <span class="pl-e">data-toggle</span>=<span class="pl-s"><span class="pl-pds">"</span>tab<span class="pl-pds">"</span></span>&gt;Tab 1&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span> <span class="pl-e">role</span>=<span class="pl-s"><span class="pl-pds">"</span>presentation<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#image02<span class="pl-pds">"</span></span> <span class="pl-e">data-toggle</span>=<span class="pl-s"><span class="pl-pds">"</span>tab<span class="pl-pds">"</span></span>&gt;Tab 2&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+              &lt;/<span class="pl-ent">ul</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+          &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+      &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h2>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h2>
+
+<p>Whilst developing a mobile commerce website there was the need for a product gallery that had such behavior, unable to find a working component decided to build one myself.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Simply apply the stylesheet and the js to your project and import it on your HTMl as such:
+On the header the StyleSheet</p>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>bootstrap-nav-tab-scrollable.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt; </pre></div>
+
+<p>Before closing the body import and execute:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>    <span class="pl-c">&lt;!-- Import the component --&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bootstrap-nav-tab-scrollable.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    <span class="pl-c">&lt;!-- Execute the plugin --&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/JavaScript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">      <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>#js_image_selection<span class="pl-pds">"</span></span>).<span class="pl-en">horizontalTabs</span>();</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">script</span>&gt;    </span></pre></div>
+
+<h2>
+<a id="api-reference" class="anchor" href="#api-reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API Reference</h2>
+
+<p>Currently, there is only one option, to initialize the horizontal tabs. As such:</p>
+
+<h3>
+<a id="initialize" class="anchor" href="#initialize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initialize</h3>
+
+<p>Call it after the element was rendered.</p>
+
+<div class="highlight highlight-source-js"><pre>     <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>#ID_OF_ELEMENT<span class="pl-pds">"</span></span>).<span class="pl-en">horizontalTabs</span>();</pre></div>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h2>
+
+<p>Feel free to include any features, issues, bug fixes, among other contributions, every help is welcome and very much appreciated.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Lucas Lazaro</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/LucasLazaro/bootstrap-nav-tab-scrollable">Bootstrap-nav-tab-scrollable</a> is maintained by <a href="https://github.com/LucasLazaro">LucasLazaro</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
