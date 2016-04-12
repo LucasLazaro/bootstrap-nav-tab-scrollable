@@ -8,6 +8,7 @@
     widthOfList = 0,
     currentPos = 0,
     adjustScroll = function () {
+      widthOfList = 0;
       $elem.find('.nav-tabs-horizontal li').each(function(index, item) {
         widthOfList += $(item).width();
       });
@@ -26,9 +27,9 @@
       $elem.find('.nav-tabs-horizontal').animate({
           scrollLeft: currentPos - widthOfReducedList
       }, 500);
-      
+
       if (currentPos - widthOfReducedList > 0) {
-        currentPos -= widthOfReducedList;    
+        currentPos -= widthOfReducedList;
       } else {
         currentPos = 0;
       }
@@ -46,7 +47,7 @@
     },
     manualScroll = function () {
       currentPos = $elem.find('.nav-tabs-horizontal').scrollLeft();
-      
+
       updateArrowStyle(currentPos);
     },
     updateArrowStyle = function (position) {
@@ -78,7 +79,7 @@
 
     $elem.find('.nav-tabs-horizontal').scroll( function (){
       manualScroll();
-      
+
     });
 
     // Initial Call
