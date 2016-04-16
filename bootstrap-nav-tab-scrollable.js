@@ -11,6 +11,14 @@
       widthOfList = 0;
       $elem.find('.nav-tabs-horizontal li').each(function(index, item) {
         widthOfList += $(item).width();
+         if($(item).hasClass("active")){
+  			  if(widthOfList>$elem.width()){
+    				currentPos = widthOfList;
+    				$elem.find('.nav-tabs-horizontal').animate({
+    				  scrollLeft: currentPos - widthOfReducedList
+    				}, 500);
+  			  }
+  		  }
       });
 
       widthAvailale = $elem.width();
