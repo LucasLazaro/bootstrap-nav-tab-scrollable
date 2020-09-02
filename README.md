@@ -14,25 +14,25 @@ Just use the normal Bootstrap Nav-tab construction, adding the `horizontal-scrol
 
 It's also possible to add arrows for extra control, but touch events will work to scroll horizontally the tab.
 
-````html
-    <div class="row">
-        <div class="col-xs-12">
-          <div id="js_image_selection" class="horizontal-scrollable-tabs">
-            <!-- Added for controls (will be invisible on bigger viewports) - touch/swipe/dragging does work though -->
-            <div class="scroller arrow-left"><i class="fa fa-arrow-left"></i></div> 
-            <div class="scroller arrow-right"><i class="fa fa-arrow-right"></i></div>
-            <div class="horizontal-tabs">
-              <!-- nav-tabs-horizontal added for the style -->
-              <ul role="tablist" class="nav nav-tabs nav-tabs-horizontal">
-                <!-- Normal bootstrap tabs -->
-                <li role="presentation" class="active"><a href="#image01" data-toggle="tab">Tab 1</a></li>
-                <li role="presentation"><a href="#image02" data-toggle="tab">Tab 2</a></li>
-              </ul>
-            </div>
-          </div>
+```html
+<div class="row">
+    <div class="col-xs-12">
+      <div id="js_image_selection" class="horizontal-scrollable-tabs">
+        <!-- Added for controls (will be invisible on bigger viewports) - touch/swipe/dragging does work though -->
+        <div class="scroller arrow-left"><i class="fa fa-arrow-left"></i></div> 
+        <div class="scroller arrow-right"><i class="fa fa-arrow-right"></i></div>
+        <div class="horizontal-tabs">
+          <!-- nav-tabs-horizontal added for the style -->
+          <ul role="tablist" class="nav nav-tabs nav-tabs-horizontal">
+            <!-- Normal bootstrap tabs -->
+            <li role="presentation" class="active"><a href="#image01" data-toggle="tab">Tab 1</a></li>
+            <li role="presentation"><a href="#image02" data-toggle="tab">Tab 2</a></li>
+          </ul>
         </div>
       </div>
-````
+    </div>
+  </div>
+```
 
 ## Motivation
 
@@ -42,19 +42,19 @@ Whilst developing a mobile commerce website there was the need for a product gal
 
 Simply apply the stylesheet and the js to your project and import it on your HTMl as such:
 On the header the StyleSheet
-````html
+```html
     <link href="bootstrap-nav-tab-scrollable.css" rel="stylesheet"> 
-```` 
+```
 
 Before closing the body import and execute:
-````html
-    <!-- Import the component -->
-    <script src="bootstrap-nav-tab-scrollable.js"></script>
-    <!-- Execute the plugin -->
-    <script type="text/JavaScript">
-      $("#js_image_selection").horizontalTabs();
-    </script>    
-````
+```html
+<!-- Import the component -->
+<script src="bootstrap-nav-tab-scrollable.js"></script>
+<!-- Execute the plugin -->
+<script type="text/JavaScript">
+  $("#js_image_selection").horizontalTabs();
+</script>
+```
 
 ## API Reference
 
@@ -62,10 +62,9 @@ Currently, there is only one option, to initialize the horizontal tabs. As such:
 
 ### Initialize
 Call it after the element was rendered.
-`````javascript
-     $("#ID_OF_ELEMENT").horizontalTabs();
-````
-
+```javascript
+$("#ID_OF_ELEMENT").horizontalTabs();
+```
 
 ## Contributors
 
